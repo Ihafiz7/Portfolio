@@ -1,0 +1,13 @@
+.navi-ul{
+    list-style: none;
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+
+}
+
+.navi-ul li{
+    color: rgb(231, 76, 60);
+    list-style-type: none;
+    cursor: pointer;
+}

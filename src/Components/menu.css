@@ -1,0 +1,103 @@
+.menu-main{
+    z-index: 10;
+}
+
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 45px;
+    height: 3px;
+    background-color: rgb(231, 76, 60);
+    margin: 6px 0;
+    transition: 0.3s;
+    z-index: 3;
+}
+
+
+
+@media (max-width:900px) {
+    .bar{
+        background-color: azure;
+    }
+    .menu-button.open .bar{
+        background-color: #e74c3c;
+    }
+}
+
+.smaller{
+    width: 30px;
+    margin-left: 15px;
+}
+
+.menu-button:hover .smaller{
+    width: 45px;
+    margin-left: 0;
+}
+
+.menu-button.open .bar.smaller{
+    width: 45px;
+    margin-left: 0;
+}
+
+.menu-button.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-button.open .bar:nth-child(2) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 270px;
+    height: 270px;
+    background: rgba(129, 123, 123, 0.842);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+@media (max-width:900px) {
+    .menu-overlay{
+        width: 100%;
+        height: 100%;
+        background: white;
+        margin: 0;
+        z-index: 2;
+    }
+}
+
+.menu-items{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+@media (max-width:900px) {
+    .menu-items{
+        position: fixed;
+        left: 50px;
+        top: 100px;
+        gap: 30px;
+    }
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #e74c3c;
+}
+
+.menu-items a:hover{
+    color: black;
+    transform: scale(1.2);
+}

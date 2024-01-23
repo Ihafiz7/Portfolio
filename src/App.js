@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Frontpage from './pages/page1';
+import CertificationPage from './pages/page2';
+import Projects from './pages/page3';
+import Contact from './pages/page4';
 
-function App() {
+const App = () => {
+  React.useEffect(() => {
+    const handleKeyDown = (event) => {
+      const windowWidth = window.innerWidth;
+      if(windowWidth > 900){
+        if (event.key === 'ArrowDown') {
+          event.preventDefault();
+          window.scrollTo(0, window.scrollY + window.innerHeight);
+        }else if (event.key === 'ArrowUp') {
+          event.preventDefault();
+          window.scrollTo(0, window.scrollY - window.innerHeight);
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <div id='frontpage'>
+        <Frontpage />
+      </div>
+      <div id='certification'>
+        <CertificationPage />
+      </div>
+      <div id='project'>
+        <Projects />
+      </div>
+      <div id='contact'>
+        <Contact />
+      </div> 
     </div>
-  );
+  )
 }
-
-export default App;
+export default App
