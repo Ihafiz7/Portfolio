@@ -29,6 +29,12 @@ export const cardData2 = [
     websiteUrl: 'https://resilient-muffin-73a8b3.netlify.app',
   },
   {
+    id: 3,
+    title: 'Quiz App',
+    heading: 'A simple Quiz App.',
+    websiteUrl: 'https://vermillion-melomakarona-36d5df.netlify.app/',
+  },
+  {
     id: 2,
     title: 'YouTube Mobile',
     heading: 'A simplified version of youtube mobile.',
@@ -65,12 +71,6 @@ export const cardData2 = [
     title: 'Calculator',
     heading: 'A simple calculator for daily life use.',
     websiteUrl: 'https://verdant-otter-b9526f.netlify.app',
-  },
-  {
-    id: 3,
-    title: 'Netflix Homepage',
-    heading: 'A clone of netflix home page.',
-    websiteUrl: 'https://ubiquitous-unicorn-730701.netlify.app',
   },
   
 ]
